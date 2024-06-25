@@ -1,0 +1,13 @@
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

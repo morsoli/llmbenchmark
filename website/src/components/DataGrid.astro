@@ -1,0 +1,398 @@
+---
+// Import the necessary CSS for AG Grid
+import "ag-grid-community/styles/ag-grid.css";
+import "ag-grid-community/styles/ag-theme-quartz.css";
+---
+
+<style>
+  .ag-theme-quartz {
+    font-family: monospace;
+    --ag-background-color: #f5f5f4;
+    --ag-header-background-color: white;
+    --ag-odd-row-background-color: white;
+    --good-color: #b9f6ce;
+    --bad-color: #fdc9c9;
+  }
+
+  .ag-theme-quartz-dark {
+    font-family: monospace;
+    --ag-background-color: #27272a;
+    --ag-header-background-color: #3f3f46;
+    --ag-odd-row-background-color: #3f3f46;
+    --good-color: #15803d;
+    --bad-color: #b91c1c;
+  }
+
+  .good {
+    background-color: var(--good-color);
+  }
+  .bad {
+    background-color: var(--bad-color);
+  }
+
+  @media (max-width: 640px) {
+    #legend {
+      display: none;
+    }
+  }
+</style>
+
+<form id="benchmarks" class="text-sm">
+  <div class="flex flex-row">
+    <div class="flex flex-col">
+      <label for="regionSelector" class="text-base font-bold">请求区域</label>
+      <label class="text-base font-bold">===============</label>
+      <div id="regionSelector" class="my-4">
+        <div>
+          <input
+            type="radio"
+            id="cdgRegionSelector"
+            name="selectedRegion"
+            value="cdg"
+            checked
+          />
+          <label for="cdgRegionSelector">西南1区（成都）</label>
+        </div> 
+        <div>
+          <input
+            type="radio"
+            id="seaRegionSelector"
+            name="selectedRegion"
+            value="sea"
+          />
+          <label for="seaRegionSelector">华北1区（北京）</label>
+        </div>
+      </div>
+    </div>
+    <div class="ml-8 flex flex-col">
+      <div id="mediaSelector" class="my-4">
+        <div style="display: none;">
+          <input
+            type="radio"
+            id="textMediaSelector"
+            name="selectedMedia"
+            value="text"
+            checked
+          />
+          <label for="textMediaSelector" style="display: none;">Text</label>
+        </div>
+      </div>
+    </div>
+    <div
+      id="legend"
+      class="mb-4 ml-auto mt-10 flex flex-col justify-end text-left"
+    >
+      <div><span class="font-bold">TTFT:</span>首token时延</div>
+      <div><span class="font-bold">TPS: </span>每秒输出token数</div>
+      <div>
+        <span class="font-bold">Total: </span>请求总耗时
+      </div>
+      <div><span class="font-bold">Context: </span>支持的上下文长度</div>
+      <div><span class="font-bold">输入输出价格: </span> 元/百万tokens</div>
+    </div>
+  </div>
+
+  <div
+    id="myGrid"
+    class="ag-theme-quartz hidden w-full bg-stone-100 font-mono text-sm text-gray-950 dark:bg-stone-900 dark:text-white"
+  >
+  </div>
+
+  <div
+    id="myFooter"
+    class="ag-theme-quartz mt-4 flex flex-row items-center justify-between text-sm"
+  >
+    <div>
+      <p class="inline-flex">
+        <div class="inline-flex items-center">
+          <span
+            class="good w-18 rounded-md px-2 py-1 text-center text-sm ring-1 ring-inset ring-gray-500/10"
+            >Fastest</span
+          >
+        </div>
+        <div class="inline-flex items-center">
+          <span
+            class="bad w-18 rounded-md px-2 py-1 text-center text-sm ring-1 ring-inset ring-gray-500/10"
+            >Slowest</span
+          >
+        </div>
+      </p>
+    </div>
+    <div id="lastUpdated" class="text-right font-mono italic"></div>
+  </div>
+</form>
+
+<script>
+  import { createGrid } from "ag-grid-community";
+  import {
+    BenchmarkRegions,
+    gridOptionsBase,
+    TTFTDefinition,
+    TPSDefinition,
+    TotalTimeDefinition,
+  } from "@/utils/DataGridDefinitions.ts";
+  import { fetchJsonFile, fetchLatestJsonFile } from "@/utils/FetchData.ts";
+
+  let gridApi;
+  const urlParams = new URLSearchParams(window.location.search);
+  let selectedRegion = urlParams.get("r") ?? "cdg";
+  let selectedMedia = "text";
+  const dateStr = urlParams.get("d");
+  const date = dateStr ? new Date(dateStr) : undefined;
+  const initialData = await fetchData(date);
+
+  async function fetchData() {
+    return date
+      ? fetchJsonFile(selectedRegion, selectedMedia, date)
+      : fetchLatestJsonFile(selectedRegion, selectedMedia);
+  }
+
+  function setUrlParam(key: string, value?: string) {
+    const url = new URL(window.location.href);
+    if (value) {
+      url.searchParams.set(key, value);
+    } else {
+      url.searchParams.delete(key);
+    }
+    window.history.replaceState({}, "", url);
+  }
+
+  async function updateRegion(region: string) {
+    selectedRegion = region;
+    updateGrid(await fetchData());
+    setUrlParam("r", region);
+  }
+
+  async function updateMedia(media: string) {
+    selectedMedia = media;
+    updateGrid(await fetchData());
+    setUrlParam("m", media);
+  }
+
+  function updateGrid(data) {
+    gridApi.setRowData(data.results);
+  }
+
+  // Returns the background color for the cell based on the value
+  function colFunction(params) {
+    const currentColumnID = params.column.colId;
+    const myGrid = document.getElementById("myGrid");
+    const style = getComputedStyle(myGrid!);
+    const map = {
+      ttft: TTFTDefinition,
+      tps: TPSDefinition,
+      total_time: TotalTimeDefinition,
+    };
+    const def = map[currentColumnID];
+    if (def) {
+      const isGood =
+        def.worstPerformance > def.bestPerformance
+          ? params.value < def.bestPerformance
+          : params.value > def.bestPerformance;
+      const isBad =
+        def.worstPerformance > def.bestPerformance
+          ? params.value > def.worstPerformance
+          : params.value < def.worstPerformance;
+      if (isGood) {
+        return { backgroundColor: style.getPropertyValue("--good-color") };
+      } else if (isBad) {
+        return { backgroundColor: style.getPropertyValue("--bad-color") };
+      }
+    }
+    return {};
+  }
+
+  function filterToText(column) {
+    if (!column) {
+      return undefined;
+    }
+    if (column.operator) {
+      const operator = column.operator === "OR" ? "|" : "&";
+      return column.conditions.reduce(
+        (acc, condition) =>
+          acc + (acc ? operator : "") + filterToText(condition),
+        "",
+      );
+    }
+    return column.filter;
+  }
+
+  function textToFilter(text) {
+    if (!text) {
+      return undefined;
+    }
+    const opChar = ["|", "&"].find((ch) => text.includes(ch));
+    if (opChar) {
+      const parts = text.split(opChar);
+      const operator = opChar === "|" ? "OR" : "AND";
+      return {
+        filterType: "text",
+        operator,
+        conditions: parts.map(textToFilter),
+      };
+    }
+    return { filterType: "text", type: "contains", filter: text };
+  }
+
+  const providerMap = new Map<string, string>([
+  ["Doubao-lite-4k", "https://www.volcengine.com/product/doubao"],
+  ["Doubao-lite-32k", "https://www.volcengine.com/product/doubao"],
+  ["Doubao-lite-128k", "https://www.volcengine.com/product/doubao"],
+  ["Doubao-pro-4k", "https://www.volcengine.com/product/doubao"],
+  ["Doubao-pro-32k", "https://www.volcengine.com/product/doubao"],
+  ["Doubao-pro-128k", "https://www.volcengine.com/product/doubao"],
+  ["GLM-4", "https://open.bigmodel.cn/"],
+  ["GLM-4V", "https://open.bigmodel.cn/"],
+  ["GLM-3-Turbo", "https://open.bigmodel.cn/"],
+  ["moonshot-v1-8k", "https://platform.moonshot.cn/docs/intro#主要概念"],
+  ["moonshot-v1-32k", "https://platform.moonshot.cn/docs/intro#主要概念"],
+  ["moonshot-v1-128k", "https://platform.moonshot.cn/docs/intro#主要概念"],
+  ["qwen-long", "https://www.aliyun.com/product/bailian"],
+  ["qwen-Turbo", "https://www.aliyun.com/product/bailian"],
+  ["qwen-plus", "https://www.aliyun.com/product/bailian"],
+  ["qwen-max", "https://www.aliyun.com/product/bailian"],
+  ["qwen-max-longcontext", "https://www.aliyun.com/product/bailian"],
+  ["qwen1.5-110b-chat", "https://www.aliyun.com/product/bailian"],
+  ["qwen1.5-72b-chat", "https://www.aliyun.com/product/bailian"],
+  ["qwen1.5-32b-chat", "https://www.aliyun.com/product/bailian"],
+  ["qwen1.5-14b-chat", "https://www.aliyun.com/product/bailian"],
+  ["qwen1.5-7b-chat", "https://www.aliyun.com/product/bailian"],
+  ["qwen-1.8b-chat", "https://www.aliyun.com/product/bailian"],
+  ["qwen1.5-0.5b-chat", "https://www.aliyun.com/product/bailian"],
+  ["Hunyuan-pro", "https://cloud.tencent.com/product/hunyuan"],
+  ["Hunyuan-standard", "https://cloud.tencent.com/product/hunyuan"],
+  ["Hunyuan-standard-256k", "https://cloud.tencent.com/product/hunyuan"],
+  ["Hunyuan-lite", "https://cloud.tencent.com/product/hunyuan"],
+  ["YI-large", "https://platform.lingyiwanwu.com/"],
+  ["YI-large-Turbo", "https://platform.lingyiwanwu.com/"],
+  ["YI-large-rag", "https://platform.lingyiwanwu.com/"],
+  ["YI-medium", "https://platform.lingyiwanwu.com/"],
+  ["YI-medium-200k", "https://platform.lingyiwanwu.com/"],
+  ["YI-spark", "https://platform.lingyiwanwu.com/"],
+  ["YI-vision", "https://platform.lingyiwanwu.com/"],
+  ["Spark3.5 Max", "https://xinghuo.xfyun.cn/sparkapi"],
+  ["Spark Pro", "https://xinghuo.xfyun.cn/sparkapi"],
+  ["Spark Lite", "https://xinghuo.xfyun.cn/sparkapi"],
+  ["ERNIE 4.0", "https://qianfan.cloud.baidu.com/"],
+  ["ERNIE-3.5-128k", "https://qianfan.cloud.baidu.com/"],
+  ["ERNIE 3.5", "https://qianfan.cloud.baidu.com/"],
+  ["ERNIE Lite", "https://qianfan.cloud.baidu.com/"],
+  ["ERNIE Speed", "https://qianfan.cloud.baidu.com/"],
+  ["ERNIE Tiny", "https://qianfan.cloud.baidu.com/"],
+  ["ERNIE Character", "https://qianfan.cloud.baidu.com/"],
+  ["ERNIE Functions", "https://qianfan.cloud.baidu.com/"],
+  ["ERNIE-Speed-128K", "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/6ltgkzya5"],
+  ["Baichuan4", "https://www.baichuan-ai.com/home"],
+  ["Baichuan3-Turbo", "https://www.baichuan-ai.com/home"],
+  ["Baichuan3-Turbo-128k", "https://www.baichuan-ai.com/home"],
+  ["Baichuan2-Turbo", "https://www.baichuan-ai.com/home"],
+  ["Baichuan2-Turbo-192k", "https://www.baichuan-ai.com/home"],
+  ["Qwen2-72B-Instruct", "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud"],
+  ["Qwen2-57B-A14B-Instruct", "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud"],
+  ["Qwen2-7B-Instruct", "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud"],
+  ["GLM-4-9B", "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud"],
+  ["Qwen1.5-110B", "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud"],
+  ["Qwen1.5-32B", "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud"],
+  ["Qwen1.5-14B", "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud"],
+  ["Qwen1.5-7B", "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud"],
+  ["DeepSeek-V2", "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud"],
+  ["DeepSeek-LLM-67B-Chat", "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud"],
+  ["Yi-1.5-34B-Chat", "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud"],
+  ["Yi-1.5-9B-Chat", "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud"],
+  ["Yi-1.5-6B-Chat", "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud"],
+  ["ChatGLM3-6B", "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud"]
+]);
+
+  function makeProviderUrl(provider: string) {
+    // 首先检查映射中是否存在提供商名称
+    if (providerMap.has(provider)) {
+      return providerMap.get(provider);
+    }
+    // 如果映射中没有找到，按照原始逻辑添加".com"后缀
+    return "https://liduos.com";
+  }
+
+  async function onDOMContentLoaded() {
+    const gridDiv = document.querySelector("#myGrid") as HTMLElement;
+    const gridOptions = gridOptionsBase;
+    const isMobile = window.matchMedia("(max-width: 640px)").matches;
+    const providerFilter = urlParams.get("pf");
+    const modelFilter = urlParams.get("mf");
+
+    gridOptions.columnDefs[1].cellRenderer = function (params) {
+      console.log(params);
+      return `<a href="${makeProviderUrl(params.value)}" class="hover:text-orange-600" target="_blank">${params.value}</a>`;
+    };
+    // remove TTFT and TPS columns on mobile
+    if (isMobile) {
+      gridOptions.columnDefs.splice(2, 2);
+    }
+    // set the style proc for each column
+    gridOptions.columnDefs.forEach((columnDef) => {
+      columnDef.cellStyle = colFunction;
+    });
+    gridOptions.onFilterChanged = (x) => {
+      const filterModel = gridApi.getFilterModel();
+      const providerFilter = filterToText(filterModel.provider);
+      const modelFilter = filterToText(filterModel.model);
+      setUrlParam("pf", providerFilter);
+      setUrlParam("mf", modelFilter);
+    };
+
+    // create the grid and set the filter if needed
+    gridApi = createGrid(gridDiv, gridOptions);
+    let filterModel = {
+      provider: textToFilter(providerFilter),
+      model: textToFilter(modelFilter),
+    };
+    gridApi.setFilterModel(filterModel);
+
+    // set the selected region and media and populate the grid
+    const selectedRegionRadio = document.querySelector(
+      `input[name=selectedRegion][value=${selectedRegion}]`,
+    ) as HTMLInputElement;
+    selectedRegionRadio.checked = true;
+    const selectedMediaRadio = document.querySelector(
+      `input[name=selectedMedia][value=${selectedMedia}]`,
+    ) as HTMLInputElement;
+    selectedMediaRadio.checked = true;
+    updateGrid(initialData);
+    gridDiv.classList.remove("hidden");
+
+    // Add text for our last updated date
+    const ourDiv = document.getElementById("lastUpdated");
+    const lastUpdate = new Date(initialData.time).toLocaleDateString();
+    ourDiv!.innerText = `最新更新时间: ${lastUpdate}`;
+
+    // Add event listeners to the radio buttons to filter the grid data
+    document
+      .getElementById("benchmarks")!
+      .addEventListener("change", async function (event) {
+        if (event.target.name === "selectedRegion") {
+          await updateRegion(event.target.value);
+        } else if (event.target.name === "selectedMedia") {
+          await updateMedia(event.target.value);
+        }
+      });
+  }
+
+  // Init the grid when the DOM is ready, or now if it has already loaded.
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", onDOMContentLoaded);
+  } else {
+    onDOMContentLoaded();
+  }
+
+  // Resize columns when the window resizes (eg orientation change on mobile)
+  window.addEventListener("resize", () => gridApi.sizeColumnsToFit());
+
+  // Watch for dark mode changes and refresh the grid accordingly
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.attributeName === "class") {
+        gridApi.refreshCells({ force: true });
+      }
+    });
+  });
+  observer.observe(document.documentElement, { attributes: true });
+</script>

@@ -1,0 +1,35 @@
+---
+import Section from "./Section.astro";
+---
+
+<Section>
+  <p>
+    人与人之间对话的延迟容忍度 <a
+      class="underline hover:text-orange-600"
+      href="https://www.semanticscholar.org/paper/Turn-taking-in-Human-Communication-%E2%80%93-Origins-and-Levinson/aa8b57bcfac5577b26d2b3a422a2378a7496f257/figure/0"
+      >通常为 200毫秒</a
+    > LLMs 的响应也应该同样快，此网站提供国内常见模型提供商 API 服务性能指标。
+  </p>
+  <p class="mt-4">
+    可以使用列类别目录下的输入框进行过滤, 例如
+    <a class="underline hover:text-orange-600" href="?mf=Doubao-pro-32k"
+      >Doubao-pro-32k</a
+    >，
+    <a
+      class="underline hover:text-orange-600"
+      href="?mf=Qwen2-7B-Instruct|Doubao-pro-32k">Qwen2-7B-Instruct vs Doubao-pro-32k</a
+    >。
+  </p>
+  <p class="mt-4">
+    页面末尾可以看到 <a class="underline hover:text-orange-600" href="#definitions">指标定义</a>
+    和
+    <a class="underline hover:text-orange-600" href="#methodology">监测机制</a> 说明。
+  </p>
+  <p class="mt-4">
+    想要添加其他国产模型 API 的性能指标，可以在这里提 <a
+      class="underline hover:text-orange-600"
+      href="https://github.com/morsoli/llmbenchmark/issues"
+      target="_blank">issue</a
+    >.
+  </p>
+</Section>

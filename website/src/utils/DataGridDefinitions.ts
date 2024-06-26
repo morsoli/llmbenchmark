@@ -33,7 +33,7 @@ export const ProviderDefinition = {
 export const TTFTDefinition = {
   title: "TTFT",
   definition:
-    "首次生成 token 时间。这指的是模型处理进来的请求并开始输出文本的速度，直接关系到用户界面何时开始更新。数值越低，意味着延迟越低，性能越快。",
+    "首次生成 token 时间。这指的是模型处理进来的请求并开始输出文本的速度，直接关系到用户界面何时开始更新。数值越低，意味着延迟越低，性能越快。（9.99s 表示请求超时）",
   bestPerformance: 0.2,
   worstPerformance: 0.5,
 };
@@ -49,7 +49,7 @@ export const TPSDefinition = {
 export const TotalTimeDefinition = {
   title: "Total",
   definition:
-    "从请求开始到响应完成的总时间，即最后一个 token 生成的时间。总时间 = 首次生成 token 时间 + 每秒生成 token 数 * token 总数。数值越低，意味着延迟越低，性能越好。",
+    "从请求开始到响应完成的总时间，即最后一个 token 生成的时间。总时间 = 首次生成 token 时间 + 每秒生成 token 数 * token 总数。数值越低，意味着延迟越低，性能越好。（99.99s 表示流式输出过程中超时 ）",
   bestPerformance: 0.4,
   worstPerformance: 1.0,
 };

@@ -970,20 +970,6 @@
       "error": null
     },
     {
-      "model": "百度文心/ernie-3.5-8k",
-      "context": "8K",
-      "input_price": 12.0,
-      "output_price": 12.0,
-      "ttr": 7.444051027297974,
-      "ttft": null,
-      "tps": null,
-      "input_tokens": null,
-      "num_tokens": 0,
-      "total_time": null,
-      "output": "",
-      "error": null
-    },
-    {
       "model": "百度文心/ernie-lite-8k",
       "context": "8K",
       "input_price": 0.0,
@@ -1092,20 +1078,6 @@
       "num_tokens": 7,
       "total_time": 1.3701021671295166,
       "output": "提供API搬家服务的大模型们",
-      "error": null
-    },
-    {
-      "model": "腾讯混元/hunyuan-standard-256k",
-      "context": "256K",
-      "input_price": 120.0,
-      "output_price": 120.0,
-      "ttr": 0.15580010414123535,
-      "ttft": null,
-      "tps": null,
-      "input_tokens": null,
-      "num_tokens": 0,
-      "total_time": null,
-      "output": "",
       "error": null
     },
     {

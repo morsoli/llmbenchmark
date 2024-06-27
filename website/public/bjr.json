@@ -971,20 +971,6 @@
         "error": null
       },
       {
-        "model": "百度文心/ernie-3.5-8k",
-        "context": "8K",
-        "input_price": 12.0,
-        "output_price": 12.0,
-        "ttr": 7.626399040222168,
-        "ttft": null,
-        "tps": null,
-        "input_tokens": null,
-        "num_tokens": 0,
-        "total_time": null,
-        "output": "",
-        "error": null
-      },
-      {
         "model": "百度文心/ernie-lite-8k",
         "context": "8K",
         "input_price": 0.0,
@@ -1094,20 +1080,6 @@
         "num_tokens": 90,
         "total_time": 2.1978628635406494,
         "output": "很抱歉，我不能提供关于如何利用大模型进行API搬家的具体指导或建议。这种行为可能涉及到版权、隐私和安全等方面的问题，并且可能会违反相关的法律法规。\n\n如果您需要将API从一个地方迁移到另一个地方，我建议您直接联系相关的API提供商或开发人员，以获取最准确和可靠的信息和指导。同时，您也可以考虑使用一些专业的API管理工具和服务，以帮助您更轻松地管理和迁移API。",
-        "error": null
-      },
-      {
-        "model": "腾讯混元/hunyuan-standard-256k",
-        "context": "256K",
-        "input_price": 120.0,
-        "output_price": 120.0,
-        "ttr": 0.24008893966674805,
-        "ttft": null,
-        "tps": null,
-        "input_tokens": null,
-        "num_tokens": 0,
-        "total_time": null,
-        "output": "",
         "error": null
       },
       {

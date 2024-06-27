@@ -17,8 +17,9 @@ export async function fetchJsonFile(
   medium: string,
   date: Date,
 ) {
-  let dateStr = date.toISOString().slice(0, 10);
-  const url = `https://storage.googleapis.com/thefastest-data/${region}/${medium}/${dateStr}.json`;
+  //let dateStr = date.toISOString().slice(0, 10);
+  //const url = `https://storage.googleapis.com/thefastest-data/${region}/${medium}/${dateStr}.json`;
+  const url = `https://raw.githubusercontent.com/morsoli/llmbenchmark/main/website/public/${region}.json`;
   return await fetchWithPostproc(url, postproc);
 }
 
@@ -28,22 +29,22 @@ function postproc(item: any) {
   }
 }
 
-// async function fetchWithPostproc(url: string, postproc: (item: any) => void) {
-//   const response = await fetch(url);
-//   if (!response.ok) {
-//     return null;
-//   }
-//   const json = await response.json();
-//   json.results.forEach(postproc);
-//   return json;
-// }
-
 async function fetchWithPostproc(url: string, postproc: (item: any) => void) {
-    const response = await fetch('./fake.json');
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const json = await response.json();
-    json.results.forEach(postproc);
-    return json;
+  const response = await fetch(url);
+  if (!response.ok) {
+    return null;
+  }
+  const json = await response.json();
+  json.results.forEach(postproc);
+  return json;
 }
+
+// async function fetchWithPostproc(url: string, postproc: (item: any) => void) {
+//     const response = await fetch('./latest.json');
+//     if (!response.ok) {
+//       throw new Error(`HTTP error! status: ${response.status}`);
+//     }
+//     const json = await response.json();
+//     json.results.forEach(postproc);
+//     return json;
+// }

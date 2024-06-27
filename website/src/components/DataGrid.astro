@@ -46,21 +46,21 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
         <div>
           <input
             type="radio"
-            id="cdgRegionSelector"
+            id="cdrRegionSelector"
             name="selectedRegion"
-            value="cdg"
+            value="cdr"
             checked
           />
-          <label for="cdgRegionSelector">西南1区（成都）</label>
+          <label for="cdrRegionSelector">西南1区</label>（<a style="color: blue" href="https://raw.githubusercontent.com/morsoli/llmbenchmark/main/website/public/cdr.json">数据详情</a>）
         </div> 
         <div>
           <input
             type="radio"
-            id="seaRegionSelector"
+            id="bjrRegionSelector"
             name="selectedRegion"
-            value="sea"
+            value="bjr"
           />
-          <label for="seaRegionSelector">华北1区（北京）(暂未采集)</label>
+          <label for="bgrRegionSelector">华北1区（<a style="color: blue" href="https://raw.githubusercontent.com/morsoli/llmbenchmark/main/website/public/bjr.json">数据详情</a>）
         </div>
       </div>
     </div>
@@ -135,7 +135,7 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
 
   let gridApi;
   const urlParams = new URLSearchParams(window.location.search);
-  let selectedRegion = urlParams.get("r") ?? "cdg";
+  let selectedRegion = urlParams.get("r") ?? "cdr";
   let selectedMedia = "text";
   const dateStr = urlParams.get("d");
   const date = dateStr ? new Date(dateStr) : undefined;

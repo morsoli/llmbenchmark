@@ -411,20 +411,6 @@
       "error": null
     },
     {
-      "model": "百度文心/ernie-3.5-8k",
-      "context": "8K",
-      "input_price": 12.0,
-      "output_price": 12.0,
-      "ttr": 7.537852764129639,
-      "ttft": null,
-      "tps": null,
-      "input_tokens": null,
-      "num_tokens": 0,
-      "total_time": null,
-      "output": "",
-      "error": null
-    },
-    {
       "model": "百度文心/ernie-lite-8k",
       "context": "8K",
       "input_price": 0.0,
@@ -534,20 +520,6 @@
       "num_tokens": 93,
       "total_time": 2.7026171684265137,
       "output": "很抱歉，我不能为您提供关于API搬家服务的信息。但是，我可以帮助您了解API（应用程序编程接口）的基本概念和用途。\n\nAPI是一种允许不同软件应用之间进行通信的接口。通过API，开发者可以访问其他应用程序的功能和数据，从而创建新的应用程序或扩展现有应用程序的功能。API通常以HTTP请求的形式发送和接收数据，并使用JSON或XML等格式进行编码。\n\n如果您有关于API的其他问题，请随时提问。",
-      "error": null
-    },
-    {
-      "model": "腾讯混元/hunyuan-standard-256k",
-      "context": "256K",
-      "input_price": 120.0,
-      "output_price": 120.0,
-      "ttr": 6.878113031387329,
-      "ttft": null,
-      "tps": null,
-      "input_tokens": null,
-      "num_tokens": 0,
-      "total_time": null,
-      "output": "",
       "error": null
     },
     {

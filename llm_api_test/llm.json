@@ -1,0 +1,535 @@
+{
+    "深度求索": {
+        "deepseek-chat": {
+            "context": "32K",
+            "input_price": 1,
+            "output_price": 2,
+            "model_info": "https://platform.deepseek.com/api-docs/zh-cn/pricing",
+            "model_price": "https://platform.deepseek.com/api-docs/zh-cn/pricing"
+        },
+        "deepseek-coder": {
+            "context": "32K",
+            "input_price": 1,
+            "output_price": 2,
+            "model_info": "https://platform.deepseek.com/api-docs/zh-cn/pricing",
+            "model_price": "https://platform.deepseek.com/api-docs/zh-cn/pricing"
+        }
+    },
+    "字节跳动": {
+        "Doubao-lite-4k": {
+            "context": "4K",
+            "input_price": 0.3,
+            "output_price": 0.6,
+            "model_info": "https://www.volcengine.com/product/doubao)",
+            "model_price": "https://www.volcengine.com/docs/82379/1099320)"
+        },
+        "Doubao-lite-32k": {
+            "context": "32K",
+            "input_price": 0.3,
+            "output_price": 0.6,
+            "model_info": "https://www.volcengine.com/product/doubao)",
+            "model_price": "https://www.volcengine.com/docs/82379/1099320)"
+        },
+        "Doubao-lite-128k": {
+            "context": "128K",
+            "input_price": 0.8,
+            "output_price": 1,
+            "model_info": "https://www.volcengine.com/product/doubao)",
+            "model_price": "https://www.volcengine.com/docs/82379/1099320)"
+        },
+        "Doubao-pro-4k": {
+            "context": "4K",
+            "input_price": 0.8,
+            "output_price": 2,
+            "model_info": "https://www.volcengine.com/product/doubao)",
+            "model_price": "https://www.volcengine.com/docs/82379/1099320)"
+        },
+        "Doubao-pro-32k": {
+            "context": "32K",
+            "input_price": 0.8,
+            "output_price": 2,
+            "model_info": "https://www.volcengine.com/product/doubao)",
+            "model_price": "https://www.volcengine.com/docs/82379/1099320)"
+        },
+        "Doubao-pro-128k": {
+            "context": "128K",
+            "input_price": 5,
+            "output_price": 9,
+            "model_info": "https://www.volcengine.com/product/doubao)",
+            "model_price": "https://www.volcengine.com/docs/82379/1099320)"
+        }
+    },
+    "智谱AI": {
+        "glm-4-0520": {
+            "context": "128K",
+            "input_price": 100,
+            "output_price": 100,
+            "model_info": "https://open.bigmodel.cn/)",
+            "model_price": "https://open.bigmodel.cn/pricing)"
+        },
+        "glm-4v": {
+            "context": "2K",
+            "input_price": 50,
+            "output_price": 50,
+            "model_info": "https://open.bigmodel.cn/)",
+            "model_price": "https://open.bigmodel.cn/pricing)"
+        },
+        "glm-4-air": {
+            "context": "128K",
+            "input_price": 1,
+            "output_price": 1,
+            "model_info": "https://open.bigmodel.cn/)",
+            "model_price": "https://open.bigmodel.cn/pricing)"
+        },
+        "glm-4-airx": {
+            "context": "8K",
+            "input_price": 10,
+            "output_price": 10,
+            "model_info": "https://open.bigmodel.cn/)",
+            "model_price": "https://open.bigmodel.cn/pricing)"
+        },
+        "glm-4-flash": {
+            "context": "128K",
+            "input_price": 0.1,
+            "output_price": 0.1,
+            "model_info": "https://open.bigmodel.cn/)",
+            "model_price": "https://open.bigmodel.cn/pricing)"
+        }
+    },
+    "月之暗面": {
+        "moonshot-v1-8k": {
+            "context": "8K",
+            "input_price": 12,
+            "output_price": 12,
+            "model_info": "https://platform.moonshot.cn/docs/intro#主要概念)",
+            "model_price": "https://platform.moonshot.cn/docs/pricing#价格说明)"
+        },
+        "moonshot-v1-32k": {
+            "context": "32K",
+            "input_price": 24,
+            "output_price": 24,
+            "model_info": "https://platform.moonshot.cn/docs/intro#主要概念)",
+            "model_price": "https://platform.moonshot.cn/docs/pricing#价格说明)"
+        },
+        "moonshot-v1-128k": {
+            "context": "128K",
+            "input_price": 60,
+            "output_price": 60,
+            "model_info": "https://platform.moonshot.cn/docs/intro#主要概念)",
+            "model_price": "https://platform.moonshot.cn/docs/pricing#价格说明)"
+        }
+    },
+    "通义千问": {
+        "qwen-long": {
+            "context": "1M",
+            "input_price": 0.5,
+            "output_price": 2,
+            "model_info": "https://www.aliyun.com/product/bailian)",
+            "model_price": "https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-thousand-questions-metering-and-billing)"
+        },
+        "qwen-Turbo": {
+            "context": "8K",
+            "input_price": 2,
+            "output_price": 6,
+            "model_info": "https://www.aliyun.com/product/bailian)",
+            "model_price": "https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-thousand-questions-metering-and-billing)"
+        },
+        "qwen-plus": {
+            "context": "32K",
+            "input_price": 4,
+            "output_price": 12,
+            "model_info": "https://www.aliyun.com/product/bailian)",
+            "model_price": "https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-thousand-questions-metering-and-billing)"
+        },
+        "qwen-max": {
+            "context": "8K",
+            "input_price": 40,
+            "output_price": 12,
+            "model_info": "https://www.aliyun.com/product/bailian)",
+            "model_price": "https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-thousand-questions-metering-and-billing)"
+        },
+        "qwen-max-longcontext": {
+            "context": "30K",
+            "input_price": 40,
+            "output_price": 12,
+            "model_info": "https://www.aliyun.com/product/bailian)",
+            "model_price": "https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-thousand-questions-metering-and-billing)"
+        },
+        "qwen1.5-110b-chat": {
+            "context": "32K",
+            "input_price": 7,
+            "output_price": 14,
+            "model_info": "https://www.aliyun.com/product/bailian)",
+            "model_price": "https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-7b-14b-72b-metering-and-billing?spm=a2c4g.11186623.0.0.16d216c65WL47p)"
+        },
+        "qwen1.5-72b-chat": {
+            "context": "32K",
+            "input_price": 5,
+            "output_price": 10,
+            "model_info": "https://www.aliyun.com/product/bailian)",
+            "model_price": "https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-7b-14b-72b-metering-and-billing?spm=a2c4g.11186623.0.0.16d216c65WL47p)"
+        },
+        "qwen1.5-32b-chat": {
+            "context": "32K",
+            "input_price": 3.5,
+            "output_price": 7,
+            "model_info": "https://www.aliyun.com/product/bailian)",
+            "model_price": "https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-7b-14b-72b-metering-and-billing?spm=a2c4g.11186623.0.0.16d216c65WL47p)"
+        },
+        "qwen1.5-14b-chat": {
+            "context": "8K",
+            "input_price": 2,
+            "output_price": 4,
+            "model_info": "https://www.aliyun.com/product/bailian)",
+            "model_price": "https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-7b-14b-72b-metering-and-billing?spm=a2c4g.11186623.0.0.16d216c65WL47p)"
+        },
+        "qwen1.5-7b-chat": {
+            "context": "8K",
+            "input_price": 1,
+            "output_price": 2,
+            "model_info": "https://www.aliyun.com/product/bailian)",
+            "model_price": "https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-7b-14b-72b-metering-and-billing?spm=a2c4g.11186623.0.0.16d216c65WL47p)"
+        },
+        "qwen-1.8b-chat": {
+            "context": "8K",
+            "input_price": 0,
+            "output_price": 0,
+            "model_info": "https://www.aliyun.com/product/bailian)",
+            "model_price": "https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-7b-14b-72b-metering-and-billing?spm=a2c4g.11186623.0.0.16d216c65WL47p)"
+        },
+        "qwen1.5-0.5b-chat": {
+            "context": "32K",
+            "input_price": 0,
+            "output_price": 0,
+            "model_info": "https://www.aliyun.com/product/bailian)",
+            "model_price": "https://help.aliyun.com/zh/dashscope/developer-reference/tongyi-qianwen-7b-14b-72b-metering-and-billing?spm=a2c4g.11186623.0.0.16d216c65WL47p)"
+        }
+    },
+    "零一万物": {
+        "yi-large": {
+            "context": "32K",
+            "input_price": 20,
+            "output_price": 20,
+            "model_info": "https://platform.lingyiwanwu.com/)",
+            "model_price": "https://platform.lingyiwanwu.com/docs#产品定价)"
+        },
+        "yi-large-turbo": {
+            "context": "16K",
+            "input_price": 12,
+            "output_price": 12,
+            "model_info": "https://platform.lingyiwanwu.com/)",
+            "model_price": "https://platform.lingyiwanwu.com/docs#产品定价)"
+        },
+        "yi-large-rag": {
+            "context": "16K",
+            "input_price": 25,
+            "output_price": 25,
+            "model_info": "https://platform.lingyiwanwu.com/)",
+            "model_price": "https://platform.lingyiwanwu.com/docs#产品定价)"
+        },
+        "yi-medium": {
+            "context": "16K",
+            "input_price": 2.5,
+            "output_price": 2.5,
+            "model_info": "https://platform.lingyiwanwu.com/)",
+            "model_price": "https://platform.lingyiwanwu.com/docs#产品定价)"
+        },
+        "yi-medium-200k": {
+            "context": "200K",
+            "input_price": 12,
+            "output_price": 12,
+            "model_info": "https://platform.lingyiwanwu.com/)",
+            "model_price": "https://platform.lingyiwanwu.com/docs#产品定价)"
+        },
+        "yi-spark": {
+            "context": "16K",
+            "input_price": 1,
+            "output_price": 1,
+            "model_info": "https://platform.lingyiwanwu.com/)",
+            "model_price": "https://platform.lingyiwanwu.com/docs#产品定价)"
+        },
+        "yi-vision": {
+            "context": "4K",
+            "input_price": 6,
+            "output_price": 6,
+            "model_info": "https://platform.lingyiwanwu.com/)",
+            "model_price": "https://platform.lingyiwanwu.com/docs#产品定价)"
+        }
+    },
+    "百川智能": {
+        "Baichuan3-Turbo-128k": {
+            "context": "128K",
+            "input_price": 24,
+            "output_price": 24,
+            "model_info": "https://www.baichuan-ai.com/home)",
+            "model_price": "https://platform.baichuan-ai.com/price)"
+        },
+        "Baichuan3-Turbo": {
+            "context": "32K",
+            "input_price": 12,
+            "output_price": 12,
+            "model_info": "https://www.baichuan-ai.com/home)",
+            "model_price": "https://platform.baichuan-ai.com/price)"
+        },
+        "Baichuan2-Turbo": {
+            "context": "32K",
+            "input_price": 8,
+            "output_price": 8,
+            "model_info": "https://www.baichuan-ai.com/home)",
+            "model_price": "https://platform.baichuan-ai.com/price)"
+        },
+        "Baichuan2-Turbo-192k": {
+            "context": "192K",
+            "input_price": 16,
+            "output_price": 16,
+            "model_info": "https://www.baichuan-ai.com/home)",
+            "model_price": "https://platform.baichuan-ai.com/price)"
+        },
+        "Baichuan4": {
+            "context": "32K",
+            "input_price": 100,
+            "output_price": 100,
+            "model_info": "https://www.baichuan-ai.com/home)",
+            "model_price": "https://platform.baichuan-ai.com/price)"
+        }
+    },
+    "SiliconCloud": {
+        "Qwen2-72B-Instruct": {
+            "context": "32K",
+            "input_price": 4.13,
+            "output_price": 4.13,
+            "model_info": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)",
+            "model_price": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)"
+        },
+        "Qwen2-57B-A14B-Instruct": {
+            "context": "32K",
+            "input_price": 1.26,
+            "output_price": 1.26,
+            "model_info": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)",
+            "model_price": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)"
+        },
+        "Qwen2-7B-Instruct": {
+            "context": "32K",
+            "input_price": 0,
+            "output_price": 0,
+            "model_info": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)",
+            "model_price": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)"
+        },
+        "Qwen2-1.5B-Instruct": {
+            "context": "32K",
+            "input_price": 0,
+            "output_price": 0,
+            "model_info": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)",
+            "model_price": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)"
+        },
+        "glm-4-9b-chat": {
+            "context": "32K",
+            "input_price": 0,
+            "output_price": 0,
+            "model_info": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)",
+            "model_price": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)"
+        },
+        "Qwen1.5-110B-Chat": {
+            "context": "32K",
+            "input_price": 4.13,
+            "output_price": 4.13,
+            "model_info": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)",
+            "model_price": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)"
+        },
+        "Qwen1.5-32B-Chat": {
+            "context": "32K",
+            "input_price": 1.26,
+            "output_price": 1.26,
+            "model_info": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)",
+            "model_price": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)"
+        },
+        "Qwen1.5-14B-Chat": {
+            "context": "32K",
+            "input_price": 0.7,
+            "output_price": 0.7,
+            "model_info": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)",
+            "model_price": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)"
+        },
+        "Qwen1.5-7B-Chat": {
+            "context": "32K",
+            "input_price": 0,
+            "output_price": 0,
+            "model_info": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)",
+            "model_price": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)"
+        },
+        "DeepSeek-Coder-V2-Instruct": {
+            "context": "32K",
+            "input_price": 1.33,
+            "output_price": 1.33,
+            "model_info": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)",
+            "model_price": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)"
+        },
+        "deepseek-llm-67b-chat": {
+            "context": "4K",
+            "input_price": 1,
+            "output_price": 1,
+            "model_info": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)",
+            "model_price": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)"
+        },
+        "DeepSeek-V2-Chat": {
+            "context": "32K",
+            "input_price": 1.33,
+            "output_price": 1.33,
+            "model_info": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)",
+            "model_price": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)"
+        },
+        "Yi-1.5-34B-Chat-16K": {
+            "context": "16K",
+            "input_price": 1.26,
+            "output_price": 1.26,
+            "model_info": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)",
+            "model_price": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)"
+        },
+        "Yi-1.5-9B-Chat-16K": {
+            "context": "16K",
+            "input_price": 0,
+            "output_price": 0,
+            "model_info": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)",
+            "model_price": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)"
+        },
+        "Yi-1.5-6B-Chat": {
+            "context": "4K",
+            "input_price": 0,
+            "output_price": 0,
+            "model_info": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)",
+            "model_price": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)"
+        },
+        "chatglm3-6b": {
+            "context": "32K",
+            "input_price": 0,
+            "output_price": 0,
+            "model_info": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)",
+            "model_price": "https://siliconflow.cn/zh-cn/maaspricing#siliconcloud)"
+        }
+    },
+    "MiniMax": {
+        "abab6.5-chat": {
+            "context": "8k",
+            "input_price": 30,
+            "output_price": 30,
+            "model_info": "https://www.minimaxi.com/platform)",
+            "model_price": "https://www.minimaxi.com/document/price?id=6433f32294878d408fc8293e)"
+        },
+        "abab6.5s-chat": {
+            "context": "245k",
+            "input_price": 10,
+            "output_price": 10,
+            "model_info": "https://www.minimaxi.com/platform)",
+            "model_price": "https://www.minimaxi.com/document/price?id=6433f32294878d408fc8293e)"
+        },
+        "abab6.5t-chat": {
+            "context": "8k",
+            "input_price": 5,
+            "output_price": 5,
+            "model_info": "https://www.minimaxi.com/platform)",
+            "model_price": "https://www.minimaxi.com/document/price?id=6433f32294878d408fc8293e)"
+        },
+        "abab6.5g-chat": {
+            "context": "8k",
+            "input_price": 5,
+            "output_price": 5,
+            "model_info": "https://www.minimaxi.com/platform)",
+            "model_price": "https://www.minimaxi.com/document/price?id=6433f32294878d408fc8293e)"
+        },
+        "abab5.5-chat": {
+            "context": "16k",
+            "input_price": 15,
+            "output_price": 15,
+            "model_info": "https://www.minimaxi.com/platform)",
+            "model_price": "https://www.minimaxi.com/document/price?id=6433f32294878d408fc8293e)"
+        },
+        "abab5.5s-chat": {
+            "context": "8k",
+            "input_price": 5,
+            "output_price": 5,
+            "model_info": "https://www.minimaxi.com/platform)",
+            "model_price": "https://www.minimaxi.com/document/price?id=6433f32294878d408fc8293e)"
+        }
+    },
+    "百度文心": {
+    "ernie-4.0-8k-latest": {
+      "context": "8K",
+      "input_price": 120.0,
+      "output_price": 120.0,
+      "model_info": "https://qianfan.cloud.baidu.com/)",
+      "model_price": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/hlrk4akp7)"
+    },
+    "ernie-3.5-128k": {
+      "context": "128K",
+      "input_price": 48.0,
+      "output_price": 96.0,
+      "model_info": "https://qianfan.cloud.baidu.com/)",
+      "model_price": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/hlrk4akp7)"
+    },
+    "ernie-lite-8k": {
+      "context": "8K",
+      "input_price": 0.0,
+      "output_price": 0.0,
+      "model_info": "https://qianfan.cloud.baidu.com/)",
+      "model_price": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/hlrk4akp7)"
+    },
+    "ernie_speed": {
+      "context": "8K",
+      "input_price": 0.0,
+      "output_price": 0.0,
+      "model_info": "https://qianfan.cloud.baidu.com/)",
+      "model_price": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/hlrk4akp7)"
+    },
+    "ernie-speed-128k": {
+        "context": "128K",
+        "input_price": 0.0,
+        "output_price": 0.0,
+        "model_info": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/6ltgkzya5)",
+        "model_price": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/hlrk4akp7)"
+    },
+    "ernie-tiny-8k": {
+      "context": "8K",
+      "input_price": 0.0,
+      "output_price": 0.0,
+      "model_info": "https://qianfan.cloud.baidu.com/)",
+      "model_price": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/hlrk4akp7)"
+    },
+    "ernie-char-8k": {
+      "context": "8K",
+      "input_price": 4.0,
+      "output_price": 8.0,
+      "model_info": "https://qianfan.cloud.baidu.com/)",
+      "model_price": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/hlrk4akp7)"
+    },
+    "ernie-func-8k": {
+      "context": "8K",
+      "input_price": 4.0,
+      "output_price": 8.0,
+      "model_info": "https://qianfan.cloud.baidu.com/)",
+      "model_price": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/hlrk4akp7)"
+    }
+    },
+    "腾讯混元": {
+    "hunyuan-pro": {
+      "context": "32K",
+      "input_price": 100.0,
+      "output_price": 100.0,
+      "model_info": "https://cloud.tencent.com/product/hunyuan)",
+      "model_price": "https://cloud.tencent.com/document/product/1729/97731)"
+    },
+    "hunyuan-standard": {
+      "context": "32K",
+      "input_price": 10.0,
+      "output_price": 10.0,
+      "model_info": "https://cloud.tencent.com/product/hunyuan)",
+      "model_price": "https://cloud.tencent.com/document/product/1729/97731)"
+    },
+    "hunyuan-lite": {
+      "context": "4K",
+      "input_price": 8.0,
+      "output_price": 8.0,
+      "model_info": "https://cloud.tencent.com/product/hunyuan)",
+      "model_price": "https://cloud.tencent.com/document/product/1729/97731)"
+    }
+  }
+  }

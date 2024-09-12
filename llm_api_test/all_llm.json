@@ -1,0 +1,663 @@
+{"科大讯飞": {
+    "Spark3.5 Max": {
+      "context": "-",
+      "input_price": 30.0,
+      "output_price": 30.0,
+      "model_info": "https://xinghuo.xfyun.cn/sparkapi)",
+      "model_price": "https://xinghuo.xfyun.cn/sparkapi)"
+    },
+    "Spark Pro": {
+      "context": "-",
+      "input_price": 30.0,
+      "output_price": 30.0,
+      "model_info": "https://xinghuo.xfyun.cn/sparkapi)",
+      "model_price": "https://xinghuo.xfyun.cn/sparkapi)"
+    },
+    "Spark Lite": {
+      "context": "-",
+      "input_price": 0.0,
+      "output_price": 0.0,
+      "model_info": "https://xinghuo.xfyun.cn/sparkapi)",
+      "model_price": "https://xinghuo.xfyun.cn/sparkapi)"
+    }
+  },  "Groq": {
+    "Llama-3-70b": {
+      "context": "8K",
+      "input_price": 4.28,
+      "output_price": 5.73,
+      "model_info": "https://console.groq.com/)",
+      "model_price": "https://wow.groq.com/)"
+    },
+    "Llama-3-8b": {
+      "context": "8K",
+      "input_price": 0.36,
+      "output_price": 0.73,
+      "model_info": "https://console.groq.com/)",
+      "model_price": "https://wow.groq.com/)"
+    },
+    "Mixtral-8x7b": {
+      "context": "32K",
+      "input_price": 1.74,
+      "output_price": 1.74,
+      "model_info": "https://console.groq.com/)",
+      "model_price": "https://wow.groq.com/)"
+    },
+    "Gemma-7b": {
+      "context": "8K",
+      "input_price": 0.73,
+      "output_price": 0.73,
+      "model_info": "https://console.groq.com/)",
+      "model_price": "https://wow.groq.com/)"
+    }
+  },
+  "Google": {
+    "Gemini 1.5 Pro": {
+      "context": "1M",
+      "input_price": 9.06,
+      "output_price": 27.19,
+      "model_info": "https://cloud.google.com/vertex-ai?hl=zh_cn)",
+      "model_price": "https://cloud.google.com/vertex-ai/generative-ai/pricing?hl=zh-cn)"
+    },
+    "Gemini 1.0 Pro": {
+      "context": "32K",
+      "input_price": 3.63,
+      "output_price": 10.88,
+      "model_info": "https://cloud.google.com/vertex-ai?hl=zh_cn)",
+      "model_price": "https://cloud.google.com/vertex-ai/generative-ai/pricing?hl=zh-cn)"
+    },
+    "Gemini 1.5 Flash": {
+      "context": "10M",
+      "input_price": 0.91,
+      "output_price": 2.72,
+      "model_info": "https://cloud.google.com/vertex-ai?hl=zh_cn)",
+      "model_price": "https://cloud.google.com/vertex-ai/generative-ai/pricing?hl=zh-cn)"
+    },
+    "PaLM 2 for Text 32k": {
+      "context": "32K",
+      "input_price": 1.81,
+      "output_price": 3.63,
+      "model_info": "https://cloud.google.com/vertex-ai?hl=zh_cn)",
+      "model_price": "https://cloud.google.com/vertex-ai/generative-ai/pricing?hl=zh-cn)"
+    },
+    "Claude-3-opus": {
+      "context": "200K",
+      "input_price": 108.75,
+      "output_price": 543.75,
+      "model_info": "https://cloud.google.com/model-garden?hl=zh_cn)",
+      "model_price": "https://cloud.google.com/vertex-ai/generative-ai/pricing?hl=zh-cn)"
+    },
+    "Claude-3-sonnet": {
+      "context": "200K",
+      "input_price": 21.75,
+      "output_price": 108.75,
+      "model_info": "https://cloud.google.com/model-garden?hl=zh_cn)",
+      "model_price": "https://cloud.google.com/vertex-ai/generative-ai/pricing?hl=zh-cn)"
+    },
+    "Claude-3-haiku": {
+      "context": "200K",
+      "input_price": 1.81,
+      "output_price": 9.06,
+      "model_info": "https://cloud.google.com/model-garden?hl=zh_cn)",
+      "model_price": "https://cloud.google.com/vertex-ai/generative-ai/pricing?hl=zh-cn)"
+    },
+    "Gemini-1.0-pro": {
+      "context": "128K",
+      "input_price": 3.63,
+      "output_price": 10.88,
+      "model_info": "https://ai.google.dev/pricing?hl=zh-cn)",
+      "model_price": "https://ai.google.dev/pricing?hl=zh-cn)"
+    },
+    "Gemini-1.5-pro": {
+      "context": "1M",
+      "input_price": 25.38,
+      "output_price": 72.86,
+      "model_info": "https://ai.google.dev/pricing?hl=zh-cn)",
+      "model_price": "https://ai.google.dev/pricing?hl=zh-cn)"
+    },
+    "Gemini-1.5-flash": {
+      "context": "10M",
+      "input_price": 2.54,
+      "output_price": 7.61,
+      "model_info": "https://ai.google.dev/pricing?hl=zh-cn)",
+      "model_price": "https://ai.google.dev/pricing?hl=zh-cn)"
+    }
+  },
+  "Deepinfra": {
+    "Openchat-7b": {
+      "context": "8K",
+      "input_price": 0.51,
+      "output_price": 0.51,
+      "model_info": "https://deepinfra.com/openchat/openchat_3.5)",
+      "model_price": "https://deepinfra.com/openchat/openchat_3.5)"
+    },
+    "Llama-3-70B-Instruct": {
+      "context": "8K",
+      "input_price": 4.28,
+      "output_price": 5.73,
+      "model_info": "https://deepinfra.com/meta-llama/Meta-Llama-3-70B-Instruct)",
+      "model_price": "https://deepinfra.com/pricing)"
+    },
+    "Llama-2-70b-chat": {
+      "context": "4K",
+      "input_price": 4.64,
+      "output_price": 5.8,
+      "model_info": "https://deepinfra.com/meta-llama/Llama-2-70b-chat-hf)",
+      "model_price": "https://deepinfra.com/pricing)"
+    }
+  },
+  "Cohere": {
+    "Command R+": {
+      "context": "128K",
+      "input_price": 21.75,
+      "output_price": 108.75,
+      "model_info": "https://cohere.com/command)",
+      "model_price": "https://cohere.com/pricing)"
+    },
+    "Command R": {
+      "context": "128K",
+      "input_price": 3.63,
+      "output_price": 10.88,
+      "model_info": "https://cohere.com/command)",
+      "model_price": "https://cohere.com/pricing)"
+    }
+  }, "Replicate": {
+    "Llama-3-70b-instruct": {
+      "context": "8K",
+      "input_price": 4.71,
+      "output_price": 19.94,
+      "model_info": "https://replicate.com/meta/meta-llama-3-70b-instruct)",
+      "model_price": "https://replicate.com/meta/meta-llama-3-70b-instruct)"
+    },
+    "Llama-3-8b-instruct": {
+      "context": "8K",
+      "input_price": 0.36,
+      "output_price": 1.81,
+      "model_info": "https://replicate.com/meta/meta-llama-3-8b-instruct)",
+      "model_price": "https://replicate.com/meta/meta-llama-3-8b-instruct)"
+    },
+    "Llama-2-70b": {
+      "context": "4K",
+      "input_price": 4.71,
+      "output_price": 19.94,
+      "model_info": "https://replicate.com/meta/llama-2-70b)",
+      "model_price": "https://replicate.com/meta/llama-2-70b)"
+    },
+    "Llama-2-13b": {
+      "context": "4K",
+      "input_price": 0.73,
+      "output_price": 3.63,
+      "model_info": "https://replicate.com/meta/llama-2-13b)",
+      "model_price": "https://replicate.com/meta/llama-2-13b)"
+    },
+    "Llama-2-7b": {
+      "context": "4K",
+      "input_price": 0.36,
+      "output_price": 1.81,
+      "model_info": "https://replicate.com/meta/llama-2-7b)",
+      "model_price": "https://replicate.com/meta/llama-2-7b)"
+    },
+    "Mixtral-8x7b-instruct-v0.1": {
+      "context": "32K",
+      "input_price": 2.18,
+      "output_price": 7.25,
+      "model_info": "https://replicate.com/mistralai/mixtral-8x7b-instruct-v0.1)",
+      "model_price": "https://replicate.com/mistralai/mixtral-8x7b-instruct-v0.1)"
+    },
+    "Mistral-7b-instruct-v0.2": {
+      "context": "32K",
+      "input_price": 0.36,
+      "output_price": 1.81,
+      "model_info": "https://replicate.com/mistralai/mistral-7b-instruct-v0.2)",
+      "model_price": "https://replicate.com/mistralai/mistral-7b-instruct-v0.2)"
+    }
+  },  "Perplexity": {
+    "pplx-70b-online": {
+      "context": "4K",
+      "input_price": 7.25,
+      "output_price": 7.25,
+      "model_info": "https://www.perplexity.ai/hub/blog/introducing-pplx-online-llms)",
+      "model_price": "https://docs.perplexity.ai/docs/pricing)"
+    },
+    "pplx-7b-online": {
+      "context": "4K",
+      "input_price": 1.45,
+      "output_price": 1.45,
+      "model_info": "https://www.perplexity.ai/hub/blog/introducing-pplx-online-llms)",
+      "model_price": "https://docs.perplexity.ai/docs/pricing)"
+    }
+  },  "OpenAI": {
+    "GPT-4o": {
+      "context": "128K",
+      "input_price": 36.25,
+      "output_price": 108.75,
+      "model_info": "https://platform.openai.com/docs/models/gpt-4o)",
+      "model_price": "https://openai.com/api/pricing/)"
+    },
+    "GPT-4 Turbo": {
+      "context": "128K",
+      "input_price": 72.5,
+      "output_price": 217.5,
+      "model_info": "https://platform.openai.com/docs/models/gpt-4-and-gpt-4-turbo)",
+      "model_price": "https://openai.com/api/pricing/#gpt-3-5-turbo)"
+    },
+    "GPT-4-32k": {
+      "context": "32K",
+      "input_price": 435.0,
+      "output_price": 870.0,
+      "model_info": "https://openai.com/index/gpt-4/)",
+      "model_price": "https://openai.com/api/pricing/#gpt-3-5-turbo)"
+    },
+    "GPT-4": {
+      "context": "8K",
+      "input_price": 217.5,
+      "output_price": 435.0,
+      "model_info": "https://openai.com/index/gpt-4/)",
+      "model_price": "https://openai.com/api/pricing/#gpt-3-5-turbo)"
+    },
+    "GPT-3.5-Turbo-0125": {
+      "context": "16K",
+      "input_price": 3.63,
+      "output_price": 10.88,
+      "model_info": "https://platform.openai.com/docs/guides/text-generation/chat-completions-api)",
+      "model_price": "https://openai.com/api/pricing/#gpt-3-5-turbo)"
+    },
+    "GPT-3.5-Turbo-instruct": {
+      "context": "4K",
+      "input_price": 10.88,
+      "output_price": 14.5,
+      "model_info": "https://platform.openai.com/docs/guides/text-generation/chat-completions-api)",
+      "model_price": "https://openai.com/api/pricing/#gpt-3-5-turbo)"
+    }
+  },
+  "Mistral": {
+    "Mixtral-8x22b": {
+      "context": "64K",
+      "input_price": 14.5,
+      "output_price": 43.5,
+      "model_info": "https://mistral.ai/technology/)",
+      "model_price": "https://mistral.ai/technology/#pricing)"
+    },
+    "Mixtral-8x7b": {
+      "context": "32K",
+      "input_price": 5.08,
+      "output_price": 5.08,
+      "model_info": "https://mistral.ai/technology/)",
+      "model_price": "https://mistral.ai/technology/#pricing)"
+    },
+    "Mistral-7b": {
+      "context": "32K",
+      "input_price": 1.81,
+      "output_price": 1.81,
+      "model_info": "https://mistral.ai/technology/)",
+      "model_price": "https://mistral.ai/technology/#pricing)"
+    },
+    "Mistral-large": {
+      "context": "32K",
+      "input_price": 29.0,
+      "output_price": 87.0,
+      "model_info": "https://mistral.ai/technology/)",
+      "model_price": "https://mistral.ai/technology/#pricing)"
+    },
+    "Mistral-small": {
+      "context": "32K",
+      "input_price": 7.25,
+      "output_price": 21.75,
+      "model_info": "https://mistral.ai/technology/)",
+      "model_price": "https://mistral.ai/technology/#pricing)"
+    }
+  },"Cloudflare": {
+    "Llama-2-7b-chat-fp16": {
+      "context": "3K",
+      "input_price": 4.06,
+      "output_price": 48.29,
+      "model_info": "https://developers.cloudflare.com/workers-ai/models/llama-2-7b-chat-fp16/)",
+      "model_price": "https://developers.cloudflare.com/workers-ai/platform/pricing)"
+    },
+    "Llama-2-7b-chat-int8": {
+      "context": "2K",
+      "input_price": 1.16,
+      "output_price": 1.74,
+      "model_info": "https://developers.cloudflare.com/workers-ai/models/llama-2-7b-chat-int8/)",
+      "model_price": "https://developers.cloudflare.com/workers-ai/platform/pricing)"
+    },
+    "Mistral-7b-instruct": {
+      "context": "32K",
+      "input_price": 0.8,
+      "output_price": 1.38,
+      "model_info": "https://developers.cloudflare.com/workers-ai/models/mistral-7b-instruct-v0.1/)",
+      "model_price": "https://developers.cloudflare.com/workers-ai/platform/pricing)"
+    }
+  },
+  "Azure": {
+    "GPT-4-Turbo": {
+      "context": "128K",
+      "input_price": 72.5,
+      "output_price": 217.5,
+      "model_info": "https://azure.microsoft.com/zh-cn/products/ai-services/openai-service)",
+      "model_price": "https://azure.microsoft.com/zh-cn/pricing/details/cognitive-services/openai-service/)"
+    },
+    "GPT-4": {
+      "context": "8K",
+      "input_price": 217.5,
+      "output_price": 435.0,
+      "model_info": "https://azure.microsoft.com/zh-cn/products/ai-services/openai-service)",
+      "model_price": "https://azure.microsoft.com/zh-cn/pricing/details/cognitive-services/openai-service/)"
+    },
+    "GPT-4-Turbo-Vision": {
+      "context": "128K",
+      "input_price": 72.5,
+      "output_price": 217.5,
+      "model_info": "https://azure.microsoft.com/zh-cn/products/ai-services/openai-service)",
+      "model_price": "https://azure.microsoft.com/zh-cn/pricing/details/cognitive-services/openai-service/)"
+    },
+    "GPT-3.5-Turbo-0125": {
+      "context": "16K",
+      "input_price": 3.63,
+      "output_price": 10.88,
+      "model_info": "https://azure.microsoft.com/zh-cn/products/ai-services/openai-service)",
+      "model_price": "https://azure.microsoft.com/zh-cn/pricing/details/cognitive-services/openai-service/)"
+    },
+    "GPT-3.5-Turbo-0613": {
+      "context": "16K",
+      "input_price": 21.75,
+      "output_price": 29.0,
+      "model_info": "https://azure.microsoft.com/zh-cn/products/ai-services/openai-service)",
+      "model_price": "https://azure.microsoft.com/zh-cn/pricing/details/cognitive-services/openai-service/)"
+    },
+    "GPT-3.5-Turbo-1106": {
+      "context": "16K",
+      "input_price": 7.25,
+      "output_price": 14.5,
+      "model_info": "https://azure.microsoft.com/zh-cn/products/ai-services/openai-service)",
+      "model_price": "https://azure.microsoft.com/zh-cn/pricing/details/cognitive-services/openai-service/)"
+    },
+    "GPT-3.5-Turbo-0301": {
+      "context": "4K",
+      "input_price": 14.5,
+      "output_price": 14.5,
+      "model_info": "https://azure.microsoft.com/zh-cn/products/ai-services/openai-service)",
+      "model_price": "https://azure.microsoft.com/zh-cn/pricing/details/cognitive-services/openai-service/)"
+    },
+    "GPT-3.5-Turbo-instruct": {
+      "context": "4K",
+      "input_price": 10.88,
+      "output_price": 14.5,
+      "model_info": "https://azure.microsoft.com/zh-cn/products/ai-services/openai-service)",
+      "model_price": "https://azure.microsoft.com/zh-cn/pricing/details/cognitive-services/openai-service/)"
+    }
+  },
+  "Anthropic": {
+    "Claude-3-opus": {
+      "context": "200K",
+      "input_price": 108.75,
+      "output_price": 543.75,
+      "model_info": "https://docs.anthropic.com/en/docs/intro-to-claude)",
+      "model_price": "https://docs.anthropic.com/en/docs/models-overview#model-comparison)"
+    },
+    "Claude-3-sonnet": {
+      "context": "200K",
+      "input_price": 21.75,
+      "output_price": 108.75,
+      "model_info": "https://docs.anthropic.com/en/docs/intro-to-claude)",
+      "model_price": "https://docs.anthropic.com/en/docs/models-overview#model-comparison)"
+    },
+    "Claude-3-haiku": {
+      "context": "200K",
+      "input_price": 1.81,
+      "output_price": 9.06,
+      "model_info": "https://docs.anthropic.com/en/docs/intro-to-claude)",
+      "model_price": "https://docs.anthropic.com/en/docs/models-overview#model-comparison)"
+    },
+    "Claude-2.1": {
+      "context": "200K",
+      "input_price": 58.0,
+      "output_price": 174.0,
+      "model_info": "https://docs.anthropic.com/en/docs/intro-to-claude)",
+      "model_price": "https://docs.anthropic.com/en/docs/models-overview#model-comparison)"
+    },
+    "Claude-2.0": {
+      "context": "100K",
+      "input_price": 58.0,
+      "output_price": 174.0,
+      "model_info": "https://docs.anthropic.com/en/docs/intro-to-claude)",
+      "model_price": "https://docs.anthropic.com/en/docs/models-overview#model-comparison)"
+    },
+    "Claude-instant-1.2": {
+      "context": "100K",
+      "input_price": 5.8,
+      "output_price": 17.4,
+      "model_info": "https://docs.anthropic.com/en/docs/intro-to-claude)",
+      "model_price": "https://docs.anthropic.com/en/docs/models-overview#model-comparison)"
+    }
+  },
+  "腾讯混元": {
+    "Hunyuan-pro": {
+      "context": "32K",
+      "input_price": 100.0,
+      "output_price": 100.0,
+      "model_info": "https://cloud.tencent.com/product/hunyuan)",
+      "model_price": "https://cloud.tencent.com/document/product/1729/97731)"
+    },
+    "Hunyuan-standard": {
+      "context": "32K",
+      "input_price": 10.0,
+      "output_price": 10.0,
+      "model_info": "https://cloud.tencent.com/product/hunyuan)",
+      "model_price": "https://cloud.tencent.com/document/product/1729/97731)"
+    },
+    "Hunyuan-standard-256k": {
+      "context": "256K",
+      "input_price": 120.0,
+      "output_price": 120.0,
+      "model_info": "https://cloud.tencent.com/product/hunyuan)",
+      "model_price": "https://cloud.tencent.com/document/product/1729/97731)"
+    },
+    "Hunyuan-lite": {
+      "context": "4K",
+      "input_price": 8.0,
+      "output_price": 8.0,
+      "model_info": "https://cloud.tencent.com/product/hunyuan)",
+      "model_price": "https://cloud.tencent.com/document/product/1729/97731)"
+    }
+  },
+  "百度文心": {
+  "ernie-4.0-8k-latest": {
+    "context": "8K",
+    "input_price": 120.0,
+    "output_price": 120.0,
+    "model_info": "https://qianfan.cloud.baidu.com/)",
+    "model_price": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/hlrk4akp7)"
+  },
+  "ernie-3.5-128k": {
+    "context": "128K",
+    "input_price": 48.0,
+    "output_price": 96.0,
+    "model_info": "https://qianfan.cloud.baidu.com/)",
+    "model_price": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/hlrk4akp7)"
+  },
+  "ernie-3.5-8k-0613": {
+    "context": "8K",
+    "input_price": 12.0,
+    "output_price": 12.0,
+    "model_info": "https://qianfan.cloud.baidu.com/)",
+    "model_price": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/hlrk4akp7)"
+  },
+  "ernie-lite-8k": {
+    "context": "8K",
+    "input_price": 0.0,
+    "output_price": 0.0,
+    "model_info": "https://qianfan.cloud.baidu.com/)",
+    "model_price": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/hlrk4akp7)"
+  },
+  "ernie_speed": {
+    "context": "8K",
+    "input_price": 0.0,
+    "output_price": 0.0,
+    "model_info": "https://qianfan.cloud.baidu.com/)",
+    "model_price": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/hlrk4akp7)"
+  },
+  "ernie-tiny-8k": {
+    "context": "8K",
+    "input_price": 0.0,
+    "output_price": 0.0,
+    "model_info": "https://qianfan.cloud.baidu.com/)",
+    "model_price": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/hlrk4akp7)"
+  },
+  "ernie-char-8k": {
+    "context": "8K",
+    "input_price": 4.0,
+    "output_price": 8.0,
+    "model_info": "https://qianfan.cloud.baidu.com/)",
+    "model_price": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/hlrk4akp7)"
+  },
+  "ernie-func-8k": {
+    "context": "8K",
+    "input_price": 4.0,
+    "output_price": 8.0,
+    "model_info": "https://qianfan.cloud.baidu.com/)",
+    "model_price": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/hlrk4akp7)"
+  },
+  "ernie-speed-128k": {
+    "context": "128K",
+    "input_price": 0.0,
+    "output_price": 0.0,
+    "model_info": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/6ltgkzya5)",
+    "model_price": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/hlrk4akp7)"
+  }
+},
+  "AWS": {
+    "Titan Text Express": {
+      "context": "8K",
+      "input_price": 1.45,
+      "output_price": 4.35,
+      "model_info": "https://aws.amazon.com/cn/bedrock/)",
+      "model_price": "https://aws.amazon.com/cn/bedrock/pricing/)"
+    },
+    "Titan Text Lite": {
+      "context": "4K",
+      "input_price": 1.09,
+      "output_price": 1.45,
+      "model_info": "https://aws.amazon.com/cn/bedrock/)",
+      "model_price": "https://aws.amazon.com/cn/bedrock/pricing/)"
+    },
+    "Claude-3-opus": {
+      "context": "200K",
+      "input_price": 108.75,
+      "output_price": 543.75,
+      "model_info": "https://aws.amazon.com/cn/bedrock/)",
+      "model_price": "https://aws.amazon.com/cn/bedrock/pricing/)"
+    },
+    "Claude-3-sonnet": {
+      "context": "200K",
+      "input_price": 21.75,
+      "output_price": 108.75,
+      "model_info": "https://aws.amazon.com/cn/bedrock/)",
+      "model_price": "https://aws.amazon.com/cn/bedrock/pricing/)"
+    },
+    "Claude-3-haiku": {
+      "context": "200K",
+      "input_price": 1.81,
+      "output_price": 9.06,
+      "model_info": "https://aws.amazon.com/cn/bedrock/)",
+      "model_price": "https://aws.amazon.com/cn/bedrock/pricing/)"
+    },
+    "Claude-2.0/2.1": {
+      "context": "100K",
+      "input_price": 58.0,
+      "output_price": 174.0,
+      "model_info": "https://aws.amazon.com/cn/bedrock/)",
+      "model_price": "https://aws.amazon.com/cn/bedrock/pricing/)"
+    },
+    "Claude-instant": {
+      "context": "200K",
+      "input_price": 5.8,
+      "output_price": 17.4,
+      "model_info": "https://aws.amazon.com/cn/bedrock/)",
+      "model_price": "https://aws.amazon.com/cn/bedrock/pricing/)"
+    },
+    "Command R+": {
+      "context": "128k",
+      "input_price": 21.75,
+      "output_price": 108.75,
+      "model_info": "https://aws.amazon.com/cn/bedrock/)",
+      "model_price": "https://aws.amazon.com/cn/bedrock/pricing/)"
+    },
+    "Command R": {
+      "context": "128k",
+      "input_price": 3.63,
+      "output_price": 10.88,
+      "model_info": "https://aws.amazon.com/cn/bedrock/)",
+      "model_price": "https://aws.amazon.com/cn/bedrock/pricing/)"
+    },
+    "Command": {
+      "context": "4K",
+      "input_price": 10.88,
+      "output_price": 14.5,
+      "model_info": "https://aws.amazon.com/cn/bedrock/)",
+      "model_price": "https://aws.amazon.com/cn/bedrock/pricing/)"
+    },
+    "Command-light": {
+      "context": "4K",
+      "input_price": 2.18,
+      "output_price": 4.35,
+      "model_info": "https://aws.amazon.com/cn/bedrock/)",
+      "model_price": "https://aws.amazon.com/cn/bedrock/pricing/)"
+    },
+    "jurassic-2-ultra": {
+      "context": "2K",
+      "input_price": 136.3,
+      "output_price": 136.3,
+      "model_info": "https://aws.amazon.com/cn/bedrock/)",
+      "model_price": "https://aws.amazon.com/cn/bedrock/pricing/)"
+    },
+    "jurassic-2-mid": {
+      "context": "2K",
+      "input_price": 90.63,
+      "output_price": 90.63,
+      "model_info": "https://aws.amazon.com/cn/bedrock/)",
+      "model_price": "https://aws.amazon.com/cn/bedrock/pricing/)"
+    },
+    "Llama-3-instruct-70b": {
+      "context": "8K",
+      "input_price": 19.21,
+      "output_price": 25.38,
+      "model_info": "https://aws.amazon.com/cn/bedrock/)",
+      "model_price": "https://aws.amazon.com/cn/bedrock/pricing/)"
+    },
+    "Llama-3-instruct-8b": {
+      "context": "8K",
+      "input_price": 2.9,
+      "output_price": 4.35,
+      "model_info": "https://aws.amazon.com/cn/bedrock/)",
+      "model_price": "https://aws.amazon.com/cn/bedrock/pricing/)"
+    },
+    "Llama-2-chat-70b": {
+      "context": "4K",
+      "input_price": 14.14,
+      "output_price": 18.56,
+      "model_info": "https://aws.amazon.com/cn/bedrock/)",
+      "model_price": "https://aws.amazon.com/cn/bedrock/pricing/)"
+    },
+    "Llama-2-chat-13b": {
+      "context": "4K",
+      "input_price": 5.44,
+      "output_price": 7.25,
+      "model_info": "https://aws.amazon.com/cn/bedrock/)",
+      "model_price": "https://aws.amazon.com/cn/bedrock/pricing/)"
+    },
+    "Mistral-8x7b": {
+      "context": "8K",
+      "input_price": 3.26,
+      "output_price": 5.08,
+      "model_info": "https://aws.amazon.com/cn/bedrock/)",
+      "model_price": "https://aws.amazon.com/cn/bedrock/pricing/)"
+    },
+    "Mistral-7b": {
+      "context": "8K",
+      "input_price": 1.09,
+      "output_price": 1.45,
+      "model_info": "https://aws.amazon.com/cn/bedrock/)",
+      "model_price": "https://aws.amazon.com/cn/bedrock/pricing/)"
+    }
+  }
+}
